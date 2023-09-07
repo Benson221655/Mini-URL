@@ -12,41 +12,46 @@ include 'redirect.php';
         <title>Mini URL</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class="px-4 py-5 my-5">
-            <h1 class="display-5 fw-bold text-body-emphasis text-center">Mini URL</h1>
-            <div class="col-lg-6 mx-auto">
-                <form id="url-form" class="row g-3 needs-validation" onsubmit="return shortenURL()" novalidate>
-                    <div class="mb-3">
-                        <label for="long-url" class="form-label">Enter your URL</label>
-                        <input type="url" class="form-control" id="long-url" placeholder="https://www.example.com/asdf"
-                            required>
-                        <div class="invalid-feedback">
-                            Please provide a valid URL.
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="short-url" class="form-label">Your Mini URL</label>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon3">localhost:8888/</span>
-                            <input type="text" class="form-control" id="short-url" placeholder="eg. abcde (Optional)"
-                                aria-describedby="basic-addon3">
-                            <div id="invalid-short-url" class="invalid-feedback">
+        <section>
+            <div class="main-container">
+                <h1 class="text display-5 fw-bold text-center">Mini URL</h1>
+                <br>
+                <div class="col-lg-6 mx-auto">
+                    <form id="url-form" class="row g-3 needs-validation" onsubmit="return shortenURL()" novalidate>
+                        <div class="mb-3">
+                            <label for="long-url" class="text form-label">Enter your URL</label>
+                            <input type="url" class="form-box form-control" id="long-url"
+                                placeholder="https://www.example.com/asdf" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid URL.
                             </div>
                         </div>
-                    </div>
-                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" id="shortenIt">Shorten
-                            It!</button>
-                    </div>
-                </form>
+                        <div class="mb-3">
+                            <label for="short-url" class="text form-label">Your Mini URL</label>
+                            <div class="input-group mb-3">
+                                <span class="text form-box-fixed input-group-text"
+                                    id="basic-addon3">localhost:8888/</span>
+                                <input type="text" class="form-box form-control" id="short-url"
+                                    placeholder="eg. abcde (Optional)" aria-describedby="basic-addon3">
+                                <div id="invalid-short-url" class="invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" id="shortenIt">Shorten
+                                It!</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
     </body>
 
 </html>
